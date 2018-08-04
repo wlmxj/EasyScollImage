@@ -5,7 +5,7 @@
 
 ![小红书.GIF](https://upload-images.jianshu.io/upload_images/5739496-42991c168b713160.GIF?imageMogr2/auto-orient/strip)
 
-- ######说说思路
+- 说说思路
 
 滚动效果用RecyclerView实现。RecyclerView有个smoothScrollToPosition方法，可以滚动到指定位置（有滚动效果，不是直接到指定位置），不了解的看这里[RecycleView4种定位滚动方式演示](https://www.jianshu.com/p/3acc395ae933)。每一个Item是一张长图，这样首尾相接滚动起来（滚到无限远）就是无限循环的效果，然后再改变滚动的速度，完成。
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-- ######无限循环
+- 无限循环
 将RecyclerView的Item数量设置成很大的值，用smoothScrollToPosition方法滚到很远的位置，就能实现这样的效果，很多banner轮播图的实现也是如此；
 ```
 public class SplashAdapter extends RecyclerView.Adapter<SplashAdapter.ViewHolder> {
@@ -81,7 +81,7 @@ public class SplashAdapter extends RecyclerView.Adapter<SplashAdapter.ViewHolder
 }
 ```
 
-- ######控制smoothScrollToPosition的滑动速度
+- 控制smoothScrollToPosition的滑动速度
 
 参考[RecyclerView调用smoothScrollToPosition() 控制滑动速度](https://blog.csdn.net/a86261566/article/details/50906456)，修改MILLISECONDS_PER_INCH的值即可
 ```
@@ -131,7 +131,7 @@ public class ScollLinearLayoutManager extends LinearLayoutManager {
 }
 ```
 
-- ######图片宽度充满屏幕、高度按图片原始宽高比例自适应
+- 图片宽度充满屏幕、高度按图片原始宽高比例自适应
 ```
 @SuppressLint("AppCompatCustomView")
 public class FitImageView extends ImageView {
@@ -183,7 +183,7 @@ public class FitImageView extends ImageView {
 </android.support.constraint.ConstraintLayout>
 ```
 
-- ######使RecyclerView不能手指触碰滑动
+- 使RecyclerView不能手指触碰滑动
 加层View屏蔽掉事件就好了
 ```
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -216,12 +216,12 @@ public class FitImageView extends ImageView {
 
 </android.support.constraint.ConstraintLayout>
 ```
-- ######完成效果
+- 完成效果
 
 ![WW.GIF](https://upload-images.jianshu.io/upload_images/5739496-aefd9b8eb4c59e5a.GIF?imageMogr2/auto-orient/strip)
 
 ---
-#Demo
+Demo
 github：[https://github.com/forvv231/EasyScollImage](https://github.com/forvv231/EasyScollImage)
 
 apk：[https://fir.im/gfdj]( https://fir.im/gfdj)
@@ -230,9 +230,9 @@ apk：[https://fir.im/gfdj]( https://fir.im/gfdj)
 
 ---
 
-#By the way
+By the way
 
 不要吐槽这背景图片、不喜欢、Demo代码里面还有别的(￣▽￣)~*
 
-#点个赞吧
+点个赞吧
 年初给自己定了今年存3万块钱的目标，刚才自己算了一下，还差8万…
